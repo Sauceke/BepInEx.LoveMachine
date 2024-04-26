@@ -157,42 +157,48 @@ namespace LoveMachine.Core.Game
             .OrderBy(result => result[POV.Balanced].Preference)
             .First();
 
-        private Dictionary<POV, Result> EvaluateSamples(IEnumerable<Sample> samples) =>
-            new Dictionary<POV, Result>
-            {
-                { POV.Balanced, EvaluateDeltas(SamplesToDeltas(samples, POV.Balanced)) },
-                { POV.Male, EvaluateDeltas(SamplesToDeltas(samples, POV.Male)) },
-                { POV.Female, EvaluateDeltas(SamplesToDeltas(samples, POV.Female)) }
-            };
-
-        private IEnumerable<Delta> SamplesToDeltas(IEnumerable<Sample> samples, POV pov)
+        private Dictionary<POV, Result> EvaluateSamples(IEnumerable<Sample> samples)
         {
-            if (pov == POV.Balanced)
+            var deltas = SamplesToDeltas(samples);
+            return new Dictionary<POV, Result>
             {
-                return samples.Select(sample => new Delta
-                {
-                    Time = sample.Time,
-                    RelativePos = sample.MalePos - sample.FemalePos
-                });
-            }
+                { POV.Balanced, EvaluateDeltas(deltas[POV.Balanced]) },
+                { POV.Male, EvaluateDeltas(deltas[POV.Male]) },
+                { POV.Female, EvaluateDeltas(deltas[POV.Female]) }
+            };
+        }
+
+        private Dictionary<POV, IEnumerable<Delta>> SamplesToDeltas(IEnumerable<Sample> samples)
+        {
             var femaleCenter = samples
                 .Select(sample => sample.FemalePos)
-                .Aggregate((acc, pos) => acc + pos / samples.Count());
+                .Aggregate(Vector3.zero, (acc, pos) => acc + pos / samples.Count());
             var maleFarthest = samples
-                .OrderBy(sample => (sample.MalePos - femaleCenter).magnitude)
+                .OrderBy(sample => -(sample.MalePos - femaleCenter).sqrMagnitude)
                 .First()
                 .MalePos;
             var femaleFarthest = samples
-                .OrderBy(sample => (sample.FemalePos - maleFarthest).magnitude)
+                .OrderBy(sample => -(sample.FemalePos - maleFarthest).sqrMagnitude)
                 .First()
                 .MalePos;
-            return samples.Select(sample => new Delta
+            return new Dictionary<POV, IEnumerable<Delta>>
             {
-                Time = sample.Time,
-                RelativePos = pov == POV.Male
-                    ? maleFarthest - sample.FemalePos
-                    : sample.MalePos - femaleFarthest
-            });
+                [POV.Balanced] = samples.Select(sample => new Delta
+                    {
+                        Time = sample.Time,
+                        RelativePos = sample.MalePos - sample.FemalePos
+                    }),
+                [POV.Male] = samples.Select(sample => new Delta
+                    {
+                        Time = sample.Time,
+                        RelativePos = maleFarthest - sample.FemalePos
+                    }),
+                [POV.Female] = samples.Select(sample => new Delta
+                    {
+                        Time = sample.Time,
+                        RelativePos = sample.MalePos - femaleFarthest
+                    })
+            };
         }
         
         private Result EvaluateDeltas(IEnumerable<Delta> deltas)
