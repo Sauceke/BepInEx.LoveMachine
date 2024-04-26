@@ -30,7 +30,16 @@ namespace LoveMachine.Core.Controller
 
         protected override IEnumerator HandleOrgasm(Device device)
         {
-            Client.OscillateCmd(device, 1f);
+            var settings = device.Settings.OscillatorSettings;
+            var feature = device.DeviceMessages.ScalarCmd
+                .First(cmd => cmd.ActuatorType == Buttplug.Buttplug.Feature.Oscillate);
+            int steps = feature.StepCount;
+            float level = Mathf.InverseLerp(
+                settings.MinRpm,
+                settings.MaxRpm,
+                value: OscillatorConfig.RpmLimit.Value);
+            float speed = Mathf.Lerp(1f / steps, 1f, level);
+            Client.OscillateCmd(device, speed);
             yield break;
         }
 

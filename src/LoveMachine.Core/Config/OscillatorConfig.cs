@@ -17,7 +17,7 @@ namespace LoveMachine.Core.Config
                 key: "RPM limit",
                 defaultValue: 300,
                 new ConfigDescription(
-                    "Maximum allowed RPM on this device.",
+                    "Safety limit for maximum allowed RPM.",
                     new AcceptableValueRange<int>(60, 600),
                     new ConfigurationManagerAttributes { Order = --order }));
         }
