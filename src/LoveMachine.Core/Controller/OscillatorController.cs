@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Linq;
 using LoveMachine.Core.Buttplug;
 using LoveMachine.Core.Config;
@@ -16,34 +15,29 @@ namespace LoveMachine.Core.Controller
 
         protected override IEnumerator HandleAnimation(Device device, StrokeInfo strokeInfo)
         {
-            var settings = device.Settings.OscillatorSettings;
-            var feature = device.DeviceMessages.ScalarCmd
-                .First(cmd => cmd.ActuatorType == Buttplug.Buttplug.Feature.Oscillate);
-            int steps = feature.StepCount;
-            float durationSecs = strokeInfo.DurationSecs;
-            float rpm = Mathf.Min(60f / durationSecs, OscillatorConfig.RpmLimit.Value);
-            float level = Mathf.InverseLerp(settings.MinRpm, settings.MaxRpm, rpm);
-            float speed = Mathf.Lerp(1f / steps, 1f, level);
-            Client.OscillateCmd(device, speed);
-            yield return WaitForSecondsUnscaled(durationSecs);
+            OscillateWithRpm(device, 60f / strokeInfo.DurationSecs);
+            yield return WaitForSecondsUnscaled(strokeInfo.DurationSecs);
         }
 
         protected override IEnumerator HandleOrgasm(Device device)
         {
-            var settings = device.Settings.OscillatorSettings;
-            var feature = device.DeviceMessages.ScalarCmd
-                .First(cmd => cmd.ActuatorType == Buttplug.Buttplug.Feature.Oscillate);
-            int steps = feature.StepCount;
-            float level = Mathf.InverseLerp(
-                settings.MinRpm,
-                settings.MaxRpm,
-                value: OscillatorConfig.RpmLimit.Value);
-            float speed = Mathf.Lerp(1f / steps, 1f, level);
-            Client.OscillateCmd(device, speed);
+            OscillateWithRpm(device, OscillatorConfig.RpmLimit.Value);
             yield break;
         }
 
         protected override void HandleLevel(Device device, float level, float durationSecs)
         {}
+
+        private void OscillateWithRpm(Device device, float rpm)
+        {
+            rpm = Mathf.Min(rpm, OscillatorConfig.RpmLimit.Value);
+            var settings = device.Settings.OscillatorSettings;
+            var feature = device.DeviceMessages.ScalarCmd
+                .First(cmd => cmd.ActuatorType == Buttplug.Buttplug.Feature.Oscillate);
+            int steps = feature.StepCount;
+            float rate = Mathf.InverseLerp(settings.MinRpm, settings.MaxRpm, value: rpm);
+            float speed = Mathf.Lerp(1f / steps, 1f, t: rate);
+            Client.OscillateCmd(device, speed);
+        }
     }
 }
