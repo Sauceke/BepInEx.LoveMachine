@@ -28,11 +28,6 @@ namespace LoveMachine.Core.UI.Settings
                 settings.MinRpm = (int)min;
                 settings.MaxRpm = (int)max;
             }
-            settings.SpeedMixing = GUIUtil.Toggle(
-                label: "Speed Mixing",
-                tooltip: "Match speeds more accurately by modulating between two speeds.",
-                value: settings.SpeedMixing,
-                defaultValue: defaults.SpeedMixing);
         }
     }
 }
