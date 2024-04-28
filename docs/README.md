@@ -65,6 +65,11 @@ Rotators
 
 - Vorze A10 Cyclone
 
+Oscillators
+
+- [Lovense Gravity]
+- [Lovense Solace]
+
 ℹ️ **Every supported device works with every game. No exceptions.**
 
 The [LoveMachine.Experiments] plugin also adds experimental support for two depth sensing devices
@@ -129,6 +134,13 @@ In Plugin Settings > LoveMachine, you can set the following parameters:
   patterns. This setting allows you to track both variants, which makes animation tracking more
   precise, but may also result in some abrupt changes mid-stroke. Turned on by default.
 
+### Core Settings
+
+- **POV:** Which character's point of view should be simulated. Possible values:
+  - **Balanced:** Replicates relative movement. Should work for most players, most of the time.
+  - **Male:** Male bottom POV. Only replicates the female character's movements.
+  - **Female:** Female bottom POV. Only replicates the male character's movements.
+
 ### Device List
 
 This is where all your devices connected to Intiface are listed.
@@ -169,6 +181,10 @@ Vibrator settings:
   Triangle, Saw, Pulse, Constant, and Custom.
 - **Custom Pattern:** Available if Vibration Pattern is set to Custom. You can set the vibration
   intensity curve using the sliders.
+
+Oscillator settings:
+
+- **RPM Range:** The minimum and maximum rotations per minute this device is capable of.
 
 Pressure settings:
 
@@ -214,6 +230,10 @@ default, pressing Spacebar will immediately stop all connected devices.
   rotation. Default is 50%.
 - **Rotation Direction Change Chance:** The direction of rotation changes with the probability of
   this setting. Default is 30%.
+
+### Oscillation Settings
+
+- **RPM limit:** Maximum allowed rotations per minute for any device. Default is 300.
 
 ### Pressure Settings
 
@@ -316,6 +336,8 @@ This mod would not have been possible without the [BepInEx] plugin framework and
 [Lovense Max 2]: https://www.lovense.com/r/k8bbja
 [Lovense Diamo]: https://www.lovense.com/r/54xpc7
 [Lovense Domi 2]: https://www.lovense.com/r/77i51d
+[Lovense Gravity]: https://www.lovense.com/r/3n3jgv
+[Lovense Solace]: https://www.lovense.com/r/t1ivev
 
 <!-- other links -->
 
