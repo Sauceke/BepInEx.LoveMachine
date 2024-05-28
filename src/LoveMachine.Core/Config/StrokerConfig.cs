@@ -1,9 +1,10 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
+using LoveMachine.Core.NonPortable;
 
-namespace LoveMachine.Core
+namespace LoveMachine.Core.Config
 {
-    public static class StrokerConfig
+    internal static class StrokerConfig
     {
         public static ConfigEntry<float> StrokeLengthRealism { get; private set; }
         public static ConfigEntry<int> HardSexIntensity { get; private set; }

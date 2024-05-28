@@ -25,7 +25,7 @@ namespace LoveMachine.KK
         protected override bool IsHardSex => false;
 
         protected override MethodInfo[] StartHMethods =>
-            new[] { AccessTools.Method(typeof(Studio.Studio), nameof(Studio.Studio.InitScene)) };
+            new[] { AccessTools.Method(typeof(Studio.Studio), nameof(Studio.Studio.SetupMap)) };
 
         protected override MethodInfo[] EndHMethods => new MethodInfo[] { };
 
@@ -34,7 +34,9 @@ namespace LoveMachine.KK
 
         protected override GameObject GetFemaleRoot(int girlIndex) => GameObject.Find("chaF_001");
 
-        protected override Transform PenisBase => GameObject.Find(balls).transform;
+        protected override Transform PenisBase => GameObject.Find(balls)?.transform;
+
+        protected override float MinStrokeLength => 0.2f;
 
         protected override string GetPose(int girlIndex) =>
             Studio.Studio.Instance.sceneInfo.GetHashCode().ToString() + isPlaying.Value;
@@ -50,13 +52,17 @@ namespace LoveMachine.KK
             speed = 1f;
         }
 
-        protected override IEnumerator UntilReady()
+        protected override IEnumerator UntilReady(object instance)
         {
+            yield return new WaitForSeconds(5f);
+            while (GetFemaleRoot(0) == null || PenisBase == null)
+            {
+                yield return new WaitForSeconds(5f);
+            }
             var timeline = Traverse.Create(Type.GetType("Timeline.Timeline, Timeline"));
-            isPlaying = timeline.Property<bool>(nameof(isPlaying));
-            duration = timeline.Property<float>(nameof(duration));
-            playbackTime = timeline.Property<float>(nameof(playbackTime));
-            yield break;
+            isPlaying = timeline.Property<bool>("isPlaying");
+            duration = timeline.Property<float>("duration");
+            playbackTime = timeline.Property<float>("playbackTime");
         }
     }
 }

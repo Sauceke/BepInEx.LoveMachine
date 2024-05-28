@@ -1,12 +1,12 @@
-﻿using HarmonyLib;
-using System;
+﻿using System;
+using HarmonyLib;
+using LoveMachine.Core.NonPortable;
 
-namespace LoveMachine.Core
+namespace LoveMachine.Core.Game
 {
     internal static class GameHooks
     {
-        private static GameDescriptor Game =>
-            CoreConfig.ManagerObject.GetComponent<GameDescriptor>();
+        private static GameAdapter Game => Globals.ManagerObject.GetComponent<GameAdapter>();
 
         public static void InstallHooks()
         {

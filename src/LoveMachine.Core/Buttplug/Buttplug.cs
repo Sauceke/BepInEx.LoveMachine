@@ -1,9 +1,9 @@
-﻿using BepInEx;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BepInEx;
 
-namespace LoveMachine.Core
+namespace LoveMachine.Core.Buttplug
 {
     public class Buttplug
     {
@@ -155,26 +155,29 @@ namespace LoveMachine.Core
         {
             internal const string Vibrate = "Vibrate";
             internal const string Constrict = "Constrict";
+            internal const string Oscillate = "Oscillate";
             internal const string Battery = "Battery";
 
             public string ActuatorType { get; set; }
             public string SensorType { get; set; }
+            public int StepCount { get; set; }
 
             public bool IsVibrator => ActuatorType == Vibrate;
             public bool IsConstrictor => ActuatorType == Constrict;
+            public bool IsOscillator => ActuatorType == Oscillate;
             public bool HasBatteryLevel => SensorType == Battery;
         }
 
-        public class DeviceListMessage<D>
-            where D : Device
+        public class DeviceListMessage<T>
+            where T : Device
         {
-            public DeviceList<D> DeviceList { get; set; }
+            public DeviceList<T> DeviceList { get; set; }
         }
 
-        public class DeviceList<D>
-            where D : Device
+        public class DeviceList<T>
+            where T : Device
         {
-            public List<D> Devices { get; set; }
+            public List<T> Devices { get; set; }
         }
     }
 }

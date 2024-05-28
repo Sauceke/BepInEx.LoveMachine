@@ -1,13 +1,14 @@
-﻿using HarmonyLib;
-using LoveMachine.Core;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using HarmonyLib;
+using LoveMachine.Core.Game;
+using LoveMachine.Core.Common;
 using UnityEngine;
 
 namespace LoveMachine.VRK
 {
-    internal class VRKanojoGame : GameDescriptor
+    internal class VRKanojoGame : GameAdapter
     {
         private CharFemale sakura;
 
@@ -54,12 +55,10 @@ namespace LoveMachine.VRK
         protected override bool IsOrgasming(int girlIndex) =>
             sakura.nowMotionName.StartsWith("Orgasm") && !sakura.nowMotionName.EndsWith("_A");
 
-        protected override void SetStartHInstance(object hscene) =>
-            sakura = ((VK_H_Houshi_Sonyu)hscene).chaFemale;
-
-        protected override IEnumerator UntilReady()
+        protected override IEnumerator UntilReady(object hscene)
         {
             yield return new WaitForSeconds(5f);
+            sakura = ((VK_H_Houshi_Sonyu)hscene).chaFemale;
         }
     }
 }

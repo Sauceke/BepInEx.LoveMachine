@@ -1,8 +1,9 @@
 ﻿using BepInEx;
 using LoveMachine.Core;
+using LoveMachine.Core.NonPortable;
 
 namespace LoveMachine.MNVR;
 
-[BepInPlugin(CoreConfig.GUID, CoreConfig.PluginName, CoreConfig.Version)]
+[BepInPlugin(Globals.GUID, Globals.PluginName, Globals.Version)]
 internal class Plugin : LoveMachinePlugin<MeltyNightVRGame>
 { }

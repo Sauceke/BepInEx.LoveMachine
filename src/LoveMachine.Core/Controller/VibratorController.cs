@@ -1,42 +1,44 @@
 ﻿using System;
 using System.Collections;
+using LoveMachine.Core.Buttplug;
+using LoveMachine.Core.Buttplug.Settings;
+using LoveMachine.Core.Game;
 using UnityEngine;
 
-namespace LoveMachine.Core
+namespace LoveMachine.Core.Controller
 {
-    public sealed class VibratorController : ClassicButtplugController
+    internal sealed class VibratorController : ClassicButtplugController
     {
-        protected override bool IsDeviceSupported(Device device) => device.IsVibrator;
+        public override string FeatureName => "Vibration";
+        
+        public override bool IsDeviceSupported(Device device) => device.IsVibrator;
 
-        protected override IEnumerator HandleAnimation(Device device, WaveInfo waveInfo)
+        protected override IEnumerator HandleAnimation(Device device, StrokeInfo strokeInfo)
         {
-            float normalizedTime = GetLatencyCorrectedNormalizedTime(device);
-            float phase = waveInfo.Phase;
-            float frequency = waveInfo.Frequency;
-            float time = normalizedTime - phase;
-            float strength = GetStrength(time * frequency, device.Settings.VibratorSettings);
+            float strength = GetStrength(strokeInfo.Completion, device.Settings.VibratorSettings);
             float intensity = Mathf.Lerp(
                 device.Settings.VibratorSettings.IntensityMin,
                 device.Settings.VibratorSettings.IntensityMax,
-                t: strength * game.VibrationIntensity);
-            client.VibrateCmd(device, intensity);
-            yield return new WaitForSecondsRealtime(1.0f / device.Settings.UpdatesHz);
+                t: strength * Game.VibrationIntensity);
+            Client.VibrateCmd(device, intensity);
+            yield return WaitForSecondsUnscaled(1f / device.Settings.UpdatesHz);
         }
 
         protected override IEnumerator HandleOrgasm(Device device)
         {
-            client.VibrateCmd(device, device.Settings.VibratorSettings.IntensityMax);
-            yield return new WaitForSecondsRealtime(game.MinOrgasmDurationSecs);
-            yield return WaitWhile(() => game.IsOrgasming(device.Settings.GirlIndex));
-            client.StopDeviceCmd(device);
+            Client.VibrateCmd(device, device.Settings.VibratorSettings.IntensityMax);
+            yield break;
         }
+
+        protected override void HandleLevel(Device device, float level, float durationSecs) =>
+            Client.VibrateCmd(device, level);
 
         private static float GetStrength(float x, VibratorSettings settings)
         {
             switch (settings.Pattern)
             {
                 case VibrationPattern.Sine:
-                    return RectifiedSineWave(x);
+                    return AbsSineWave(x);
 
                 case VibrationPattern.Triangle:
                     return TriangleWave(x);
@@ -56,15 +58,15 @@ namespace LoveMachine.Core
             throw new Exception("unreachable");
         }
 
-        private static float RectifiedSineWave(float x) => Mathf.Abs(Mathf.Cos(Mathf.PI * x));
+        private static float AbsSineWave(float x) => Mathf.Abs(Mathf.Cos(Mathf.PI * x));
 
-        private static float TriangleWave(float x) => 2f * Mathf.Abs((x + 1f) % 1f - 0.5f);
+        private static float TriangleWave(float x) => Mathf.PingPong(x * 2f + 1f, 1f);
 
-        private static float SawWave(float x) => (x % 1f + 1f) % 1f;
+        private static float SawWave(float x) => Mathf.Repeat(x, 1f);
 
         private static float PulseWave(float x) => Mathf.Round(SawWave(x));
 
         private static float CustomWave(float x, float[] pattern) =>
-            pattern[(int)((x % 1f + 1f) % 1f * pattern.Length)];
+            pattern[(int)(SawWave(x) * pattern.Length)];
     }
 }

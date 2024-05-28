@@ -1,0 +1,12 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+div#header, div#title {
+  display: none !important;
+}
+
+a {
+  color: #00dbff !important;
+}

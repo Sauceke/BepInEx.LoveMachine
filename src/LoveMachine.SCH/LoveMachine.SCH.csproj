@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <OutputPath>..\bin\LoveMachine.SCH\BepInEx\plugins\SCH_LoveMachine\</OutputPath>
+        <RuntimeIdentifier>none</RuntimeIdentifier>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\LoveMachine.Core.IL2CPP\LoveMachine.Core.IL2CPP.csproj" />
+    </ItemGroup>
+
+</Project>

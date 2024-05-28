@@ -1,16 +1,16 @@
-﻿using HarmonyLib;
-using LoveMachine.Core;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using HarmonyLib;
+using LoveMachine.Core.Game;
+using LoveMachine.Core.Common;
 using UnityEngine;
 
 namespace LoveMachine.SCS
 {
-    internal class SecrossphereGame : GameDescriptor
+    internal class SecrossphereGame : GameAdapter
     {
-        private object scene;
         private MonoBehaviour[] females;
         private Animator[] femaleAnimators;
         private Traverse<int> state;
@@ -48,13 +48,11 @@ namespace LoveMachine.SCS
         protected override string GetPose(int girlIndex) =>
             GetFemaleAnimator(girlIndex).GetCurrentAnimatorStateInfo(0).fullPathHash.ToString();
 
-        protected override bool IsIdle(int girlIndex) => state.Value < 0 || state.Value > 2;
+        protected override bool IsIdle(int girlIndex) => state.Value != 1 && state.Value != 2;
 
         protected override bool IsOrgasming(int girlIndex) => state.Value == 3;
 
-        protected override void SetStartHInstance(object scene) => this.scene = scene;
-
-        protected override IEnumerator UntilReady()
+        protected override IEnumerator UntilReady(object scene)
         {
             yield return new WaitForSeconds(5f);
             females = Traverse.Create(scene)

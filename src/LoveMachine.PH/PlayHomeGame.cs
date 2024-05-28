@@ -1,17 +1,18 @@
-﻿using H;
-using HarmonyLib;
-using IllusionUtility.GetUtility;
-using LoveMachine.Core;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using H;
+using HarmonyLib;
+using IllusionUtility.GetUtility;
+using LoveMachine.Core.Game;
+using LoveMachine.Core.Common;
 using UnityEngine;
 
 namespace LoveMachine.PH
 {
-    internal sealed class PlayHomeGame : GameDescriptor
+    internal sealed class PlayHomeGame : GameAdapter
     {
         private static readonly H_STATE[] activeHStates = { H_STATE.LOOP, H_STATE.SPURT };
 
@@ -32,7 +33,7 @@ namespace LoveMachine.PH
             { Bone.LeftHand, "cf_J_Hand_Index01_L" },
             { Bone.RightHand, "cf_J_Hand_Index01_R" },
             { Bone.LeftFoot, "k_f_toeL_00" },
-            { Bone.RightFoot, "k_f_toeR_00" },
+            { Bone.RightFoot, "k_f_toeR_00" }
         };
 
         protected override int HeroineCount => scene.mainMembers.females.Count;
@@ -73,10 +74,9 @@ namespace LoveMachine.PH
         protected override bool IsOrgasming(int _) =>
             orgasmStates.Contains(scene.mainMembers.StateMgr.nowStateID);
 
-        protected override void SetStartHInstance(object scene) => this.scene = (H_Scene)scene;
-
-        protected override IEnumerator UntilReady()
+        protected override IEnumerator UntilReady(object instance)
         {
+            scene = (H_Scene)instance;
             yield return new WaitWhile(() => scene.mainMembers?.StyleData == null
                 || scene.mainMembers.females.IsNullOrEmpty()
                 || scene.mainMembers.males.IsNullOrEmpty()

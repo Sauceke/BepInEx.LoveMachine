@@ -1,14 +1,15 @@
-﻿using HarmonyLib;
-using LoveMachine.Core;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using HarmonyLib;
+using LoveMachine.Core.Game;
+using LoveMachine.Core.Common;
 using UnityEngine;
 
 namespace LoveMachine.OA
 {
-    internal sealed class OurApartmentGame : GameDescriptor
+    internal sealed class OurApartmentGame : GameAdapter
     {
         private static readonly string[] layerNames =
             { "Base SexSim", "From Behind SexSim", "Couch Missionary SexSim" };
@@ -62,14 +63,12 @@ namespace LoveMachine.OA
         protected override bool IsIdle(int girlIndex) => !isSex.Value;
 
         protected override bool IsOrgasming(int girlIndex) => GetPose(0).Contains("Cum");
-
-        protected override void SetStartHInstance(object sexSimControl) =>
-            isSex = Traverse.Create(sexSimControl).Field<bool>("_sexActive");
-
-        protected override IEnumerator UntilReady()
+        
+        protected override IEnumerator UntilReady(object sexSimControl)
         {
             yield return new WaitWhile(() =>
                 (naomiAnimator = GameObject.Find("NaomiRig").GetComponent<Animator>()) == null);
+            isSex = Traverse.Create(sexSimControl).Field<bool>("_sexActive");
             animationLayers = Enumerable.Range(0, naomiAnimator.layerCount)
                 .Where(i => layerNames.Contains(naomiAnimator.GetLayerName(i)));
         }

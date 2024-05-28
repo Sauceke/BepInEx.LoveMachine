@@ -1,9 +1,10 @@
 ﻿using BepInEx;
 using BepInEx.Configuration;
+using LoveMachine.Core.NonPortable;
 
-namespace LoveMachine.Core
+namespace LoveMachine.Core.Config
 {
-    public static class RotatorConfig
+    internal static class RotatorConfig
     {
         public static ConfigEntry<float> RotationSpeedRatio { get; private set; }
         public static ConfigEntry<float> RotationDirectionChangeChance { get; private set; }

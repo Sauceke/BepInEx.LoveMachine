@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Reflection;
 using HarmonyLib;
-using LoveMachine.Core;
+using LoveMachine.Core.Common;
+using LoveMachine.Core.Game;
 using UnityEngine;
 
 namespace LoveMachine.MNVR;
 
-public class MeltyNightVRGame : GameDescriptor
+public class MeltyNightVRGame : GameAdapter
 {
     private Traverse<Animator> animator;
     private Traverse<GameObject> tnp;
@@ -47,8 +48,12 @@ public class MeltyNightVRGame : GameDescriptor
     protected override bool IsIdle(int girlIndex) =>
         Free.Value || h_motion.Value.Contains("Idle");
 
-    protected override void SetStartHInstance(object instance)
+    protected override IEnumerator UntilReady(object instance)
     {
+        while (PenisBase == null)
+        {
+            yield return new WaitForSeconds(1f);
+        }
         var sexControl = Traverse.Create(instance);
         var character = sexControl.Property("Character");
         animator = sexControl.Property<Animator>("animator");
@@ -56,14 +61,6 @@ public class MeltyNightVRGame : GameDescriptor
         tnp = sexControl.Property<GameObject>("tnp");
         Free = sexControl.Property<bool>("Free");
         body = sexControl.Property("characterBody");
-    }
-    
-    protected override IEnumerator UntilReady()
-    {
-        while (PenisBase == null)
-        {
-            yield return new WaitForSeconds(1f);
-        }
         yield return null;
     }
 }
