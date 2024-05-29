@@ -50,10 +50,6 @@ public class MeltyNightVRGame : GameAdapter
 
     protected override IEnumerator UntilReady(object instance)
     {
-        while (PenisBase == null)
-        {
-            yield return new WaitForSeconds(1f);
-        }
         var sexControl = Traverse.Create(instance);
         var character = sexControl.Property("Character");
         animator = sexControl.Property<Animator>("animator");
@@ -61,6 +57,10 @@ public class MeltyNightVRGame : GameAdapter
         tnp = sexControl.Property<GameObject>("tnp");
         Free = sexControl.Property<bool>("Free");
         body = sexControl.Property("characterBody");
+        while (PenisBase == null)
+        {
+            yield return new WaitForSeconds(1f);
+        }
         yield return null;
     }
 }
