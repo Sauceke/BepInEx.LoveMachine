@@ -19,7 +19,7 @@ namespace LoveMachine.Core.Controller
             float intensity = Mathf.Lerp(
                 device.Settings.VibratorSettings.IntensityMin,
                 device.Settings.VibratorSettings.IntensityMax,
-                t: strength * Game.VibrationIntensity);
+                t: strength);
             Client.VibrateCmd(device, intensity);
             yield return WaitForSecondsUnscaled(1f / device.Settings.UpdatesHz);
         }
