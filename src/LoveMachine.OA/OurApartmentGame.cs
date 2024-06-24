@@ -9,9 +9,6 @@ namespace LoveMachine.OA;
 
 internal sealed class OurApartmentGame : GameAdapter
 {
-    private static readonly string[] layerNames =
-        { "Base SexSim", "From Behind SexSim", "Couch Missionary SexSim" };
-
     private Traverse<bool> isSex;
     private Animator naomiAnimator;
     private IEnumerable<int> animationLayers;
@@ -48,7 +45,7 @@ internal sealed class OurApartmentGame : GameAdapter
 
     protected override MethodInfo[] EndHMethods => new[]
     {
-        AccessTools.Method("Momoirosoft.Managers.SexSimControl, Assembly-CSharp:RunSexConclusion")
+        AccessTools.Method("Momoirosoft.Managers.SexSimControl, Assembly-CSharp:EndStreams")
     };
 
     protected override Animator GetFemaleAnimator(int girlIndex) => naomiAnimator;
@@ -75,6 +72,6 @@ internal sealed class OurApartmentGame : GameAdapter
         }
         isSex = Traverse.Create(sexSimControl).Property<bool>("_sexActive");
         animationLayers = Enumerable.Range(0, naomiAnimator.layerCount)
-            .Where(i => layerNames.Contains(naomiAnimator.GetLayerName(i)));
+            .Where(i => naomiAnimator.GetLayerName(i).ToLower().EndsWith(" sexsim"));
     }
 }
