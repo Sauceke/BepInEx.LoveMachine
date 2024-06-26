@@ -8,35 +8,43 @@
 
 Adds support for [some computer-controlled sex toys](#supported-devices) in the following games:
 
-| Title                       | Developer        | 🥽 VR                        | 🖥 Desktop |
-| --------------------------- | ---------------- | ---------------------------- | --------- |
-| [AI-deal-Rays]              | Riez-ON          |                              | ✓         |
-| AI Shoujo                   | Illusion         | ✓ <sup>with [AISVR]</sup>    | ✓         |
-| [Custom Order Maid 3D 2]    | Kiss             | ✓                            | ✓         |
-| [Datsui Janken]             | Visionary        |                              | ✓         |
-| Emotion Creators            | Illusion         | ✓ <sup>with [EC_VR]</sup>    | ✓         |
-| [Holy Knight Ricca]         | Mogurasoft       |                              | ✓         |
-| [HoneyCome]                 | Illgames         |                              | ✓         |
-| Honey Select                | Illusion         |                              | ✓         |
-| Honey Select 2              | Illusion         | ✓                            | ✓         |
-| [Houkago Rinkan Chuudoku]   | Miconisomi       | ✓ <sup>with [AGHVR]</sup>    | ✓         |
-| [Incubus 2: Camlann]        | Tanpakusitsu     |                              | ✓         |
-| [Insult Order]              | Miconisomi       | ✓ <sup>with [IOVR]</sup>     | ✓         |
-| Koikatsu                    | Illusion         | ✓                            | ✓         |
-| Koikatsu Party              | Illusion         | ✓                            | ✓         |
-| Koikatsu Sunshine           | Illusion         | ✓                            | ✓         |
-| [Koi-Koi VR: Love Blossoms] | Apricot Heart    | ✓                            | ✓         |
-| [Last Evil]                 | Flametorch       |                              | ✓         |
-| [Oedo Trigger]              | CQC Software     | ✓ <sup>sold separately</sup> | ✓         |
-| [Our Apartment]             | Momoiro Software |                              | ✓         |
-| PlayHome                    | Illusion         | ✓                            | ✓         |
-| RoomGirl                    | Illusion         |                              | ✓         |
-| Secrossphere                | Illusion         |                              | ✓         |
-| [Sexaroid Girl]             | Daminz           | ✓                            |           |
-| [Solas City Heroes]         | MrZGames         |                              | ✓         |
-| [Succubus Cafe]             | Migi Studio      |                              | ✓         |
-| VR Kanojo                   | Illusion         | ✓                            |           |
-| [Writhing Play]             | Robi             | ✓                            | ✓         |
+| Title                       | Developer     | 🥽 VR                        | 🖥 Desktop |
+| --------------------------- | ------------- | ---------------------------- | --------- |
+| [AI-deal-Rays]              | Riez-ON       |                              | ✓         |
+| AI Shoujo                   | Illusion      | ✓ <sup>with [AISVR]</sup>    | ✓         |
+| [Custom Order Maid 3D 2]    | Kiss          | ✓                            | ✓         |
+| [Datsui Janken]             | Visionary     |                              | ✓         |
+| Emotion Creators            | Illusion      | ✓ <sup>with [EC_VR]</sup>    | ✓         |
+| [Holy Knight Ricca]         | Mogurasoft    |                              | ✓         |
+| [HoneyCome]                 | Illgames      |                              | ✓         |
+| Honey Select                | Illusion      |                              | ✓         |
+| Honey Select 2              | Illusion      | ✓                            | ✓         |
+| [Houkago Rinkan Chuudoku]   | Miconisomi    | ✓ <sup>with [AGHVR]</sup>    | ✓         |
+| [Incubus 2: Camlann]        | Tanpakusitsu  |                              | ✓         |
+| [Insult Order]              | Miconisomi    | ✓ <sup>with [IOVR]</sup>     | ✓         |
+| Koikatsu                    | Illusion      | ✓                            | ✓         |
+| Koikatsu Party              | Illusion      | ✓                            | ✓         |
+| Koikatsu Sunshine           | Illusion      | ✓                            | ✓         |
+| [Koi-Koi VR: Love Blossoms] | Apricot Heart | ✓                            | ✓         |
+| [Last Evil]                 | Flametorch    |                              | ✓         |
+| [Oedo Trigger]              | CQC Software  | ✓ <sup>sold separately</sup> | ✓         |
+| PlayHome                    | Illusion      | ✓                            | ✓         |
+| RoomGirl                    | Illusion      |                              | ✓         |
+| Secrossphere                | Illusion      |                              | ✓         |
+| [Sexaroid Girl]             | Daminz        | ✓                            |           |
+| [Solas City Heroes]         | MrZGames      |                              | ✓         |
+| [Succubus Cafe]             | Migi Studio   |                              | ✓         |
+| VR Kanojo                   | Illusion      | ✓                            |           |
+| [Writhing Play]             | Robi          | ✓                            | ✓         |
+
+The following early access games are also supported, but compatibility with later versions is not
+guaranteed.
+
+| Title            | Developer          | Supported Version | Plugin                                                   |
+| ---------------- | ------------------ | ----------------- | -------------------------------------------------------- |
+| [Our Apartment]  | Momoiro Software   | 0.5.3.a           | Available in the [installer]                             |
+| [Melty Night VR] | Cauchemar          | 0.5.5             | [Patreon post][Patreon-MNVR], or build the `mnvr` branch |
+| [Orc Massage]    | TorchEntertainment | July 11, 2023     | [Patreon post][Patreon-OM], or build the `om` branch     |
 
 ## Supported devices
 
@@ -296,6 +304,8 @@ This mod would not have been possible without the [BepInEx] plugin framework and
 [LoveMachine.Experiments]: https://sauceke.github.io/LoveMachine.Experiments
 [Hotdog]: https://sauceke.github.io/hotdog
 [Patreon]: https://www.patreon.com/sauceke
+[Patreon-MNVR]: https://www.patreon.com/posts/lovemachine-for-105156790
+[Patreon-OM]: https://www.patreon.com/posts/lovemachine-for-105156790
 [Demo video]: https://www.erome.com/a/f2XKHJ1I
 [issue]: https://github.com/Sauceke/LoveMachine/issues/new?template=technical-problem.md
 
@@ -353,3 +363,5 @@ This mod would not have been possible without the [BepInEx] plugin framework and
 [Last Evil]: https://store.steampowered.com/app/823910/last_evil/
 [Succubus Cafe]: https://store.steampowered.com/app/1520500/Succubus_Cafe/
 [Solas City Heroes]: https://store.steampowered.com/app/2060170/Solas_City_Heroes/
+[Melty Night VR]: https://ci-en.dlsite.com/creator/3131
+[Orc Massage]: https://store.steampowered.com/app/1129540/Orc_Massage/
