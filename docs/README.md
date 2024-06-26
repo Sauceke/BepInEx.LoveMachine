@@ -37,8 +37,8 @@ Adds support for [some computer-controlled sex toys](#supported-devices) in the 
 | VR Kanojo                   | Illusion      | ✓                            |           |
 | [Writhing Play]             | Robi          | ✓                            | ✓         |
 
-The following early access games are also supported, but compatibility with later versions is not
-guaranteed.
+The following early access games are also supported, but compatibility with later versions of them
+is not guaranteed.
 
 | Title            | Developer          | Supported Version | Plugin                                                   |
 | ---------------- | ------------------ | ----------------- | -------------------------------------------------------- |
