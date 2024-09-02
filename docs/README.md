@@ -268,20 +268,22 @@ Sauceke   •   nhydock   •   hogefugamoga   •   RPKU   �
 
 ### Patrons
 
-[ManlyMarco]   •   AbGz   •   Aftercurve   •   AkronusWings   •   Ambicatus   •   Andrew Hall   •  
-as a1031   •   AstralClock   •   asuka   •   Atlantic Dragon   •   Average MBT viewer   •   Benos
-Hentai   •   boaz   •   BOOK   •   Bri   •   butz   •   cat tail   •   CBN ヴい    •  
-Ceruleon   •   CJ   •   CookieMuncher   •   CROM   •   Daniel   •   DDJTK   •   dimo   •  
-EPTG   •   er er   •   Ergo   •   Flan   •   funnychicken   •   Gabbelgu   •   Gaku Kihara   •  
-gmolnmol   •   gold25   •   GOU YOSIHIRO   •   Greg   •   hiro   •   Ior1yagami   •   jason   •  
-Jayhawk   •   John Last   •   Junk   •   jwk   •   Kai Yami   •   KodFish   •   KTKT   •  
-kuni   •   Laneo   •   le d   •   mokochurin   •   Nemi   •   Nephilim Bacon   •   nppon   •  
-PhazR   •   Phil   •   pontatata   •   prepare55   •   purena   •   real name   •  
-rolandmitch   •   RP 君    •   SavagePastry   •   Sean McKagan   •   Shakes   •   Taibe   •  
-tanu   •   TO   •   Tom   •   TrashTaste   •   ttrs   •   tutinoko   •   uminekoZ   •  
-unitora   •   uruurian   •   Wel Adunno   •   Wu Lins   •   yamada tarou   •   Zesty Cucumber   •  
-Zijian Wang   •   Zomba Mann   •   シルバー    •   ふ    •   マラカス    •   もふさん    •   りょす
-け みのかわ    •   一太 川崎    •   優希 岩永    •   哲慶 宗    •   国崎往人    •   市民 藤沢    •  
+[ManlyMarco]   •   '- [ Willox ] ヘンタイ    •   AbGz   •   AkronusWings   •   Alex   •  
+Ambicatus   •   Andrew Hall   •   as a1031   •   AstralClock   •   asuka   •   Atlantic Dragon   •  
+Average MBT viewer   •   Benos Hentai   •   boaz   •   BOOK   •   Bri   •   Bunny Dreammy   •  
+butz   •   cat tail   •   Ceruleon   •   Chai   •   CJ   •   CookieMuncher   •   CROM   •   CSV
+TORP   •   Daniel   •   dc1222   •   DDJTK   •   EPTG   •   er er   •   Ergo   •  
+Firestorm447   •   funnychicken   •   Gabbelgu   •   Gaku Kihara   •   gmolnmol   •   gold25   •  
+GOU YOSIHIRO   •   Greg   •   Grindcore   •   hiro   •   Ior1yagami   •   jason   •   Jayhawk   •  
+Jesse Russell   •   JJ   •   John Last   •   Kai Yami   •   KodFish   •   KTKT   •   kunewb   •  
+kuni   •   Lancer   •   Laneo   •   le d   •   lover not fighter   •   Maha   •   Marcos
+Gonzalez   •   milkyway ミルク    •   mokochurin   •   Moon2S Clap   •   Nemi   •   Nephilim
+Bacon   •   Noel Molina   •   nppon   •   PhazR   •   pontatata   •   POPO popo   •  
+prepare55   •   real name   •   RP 君    •   SavagePastry   •   Shakes   •   shiro   •  
+Sphiffy   •   Taibe   •   TO   •   TrashTaste   •   ttrs   •   tutinoko   •   unitora   •   Wel
+Adunno   •   xagtxc   •   yur liao   •   Zijian Wang   •   Zomba Mann   •   ヴい＠CBN   •   グリム・
+ヴァン・アストル 聖騎士    •   こわい まんじゅー    •   シルバー    •   ふ    •   マラカス    •   り
+ょすけ みのかわ    •   一太 川崎    •   優希 岩永    •   哲慶 宗    •   国崎往人    •   夢 阿    •  
 洋 冨岡    •   猛 羽場    •   终晓    •   郁弥 中村    •   闇《YAMI》   •   高島　渉
 
 ## Acknowledgements
