@@ -40,11 +40,13 @@ Adds support for [some computer-controlled sex toys](#supported-devices) in the 
 The following early access games are also supported, but compatibility with later versions of them
 is not guaranteed.
 
-| Title            | Developer          | Supported Version | Plugin                                                   |
-| ---------------- | ------------------ | ----------------- | -------------------------------------------------------- |
-| [Our Apartment]  | Momoiro Software   | 0.5.3.a           | Available in the [installer]                             |
-| [Melty Night VR] | Cauchemar          | 0.5.5             | [Patreon post][Patreon-MNVR], or build the `mnvr` branch |
-| [Orc Massage]    | TorchEntertainment | July 11, 2023     | [Patreon post][Patreon-OM], or build the `om` branch     |
+| Title                      | Developer          | Supported Version | Plugin                                                   |
+| -------------------------- | ------------------ | ----------------- | -------------------------------------------------------- |
+| [Our Apartment]            | Momoiro Software   | 0.5.3.a           | Available in the [installer]                             |
+| [Melty Night VR]           | Cauchemar          | 0.5.5             | [Patreon post][Patreon-MNVR], or build the `mnvr` branch |
+| [Orc Massage]              | TorchEntertainment | July 11, 2023     | [Patreon post][Patreon-OM], or build the `om` branch     |
+| [Summer In Heat]           | Miconisomi         | 0.10              | [Free patreon post][Patreon-SIH]                         |
+| [Summer Vacation Scramble] | Illgames           | 1.0.0             | [Free patreon post][Patreon-SVS]                         |
 
 ## Supported devices
 
@@ -308,6 +310,8 @@ This mod would not have been possible without the [BepInEx] plugin framework and
 [Patreon]: https://www.patreon.com/sauceke
 [Patreon-MNVR]: https://www.patreon.com/posts/lovemachine-for-105156790
 [Patreon-OM]: https://www.patreon.com/posts/lovemachine-for-105156790
+[Patreon-SIH]: https://www.patreon.com/posts/xia-nosakari-107065871
+[Patreon-SVS]: https://www.patreon.com/posts/lovemachine-for-111228062
 [Demo video]: https://www.erome.com/a/f2XKHJ1I
 [issue]: https://github.com/Sauceke/LoveMachine/issues/new?template=technical-problem.md
 
@@ -337,6 +341,8 @@ This mod would not have been possible without the [BepInEx] plugin framework and
   https://www.dlsite.com/maniax/dlaf/=/t/s/link/work/aid/sauceke/locale/en_US/id/RJ303936.html/?locale=en_US
 [AI-deal-Rays]:
   https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/sauceke/locale/en_US/id/RJ406835.html/?locale=en_US
+[Summer Vacation Scramble]:
+  https://www.dlsite.com/pro/dlaf/=/t/n/link/work/aid/sauceke/locale/en_US/id/VJ01002420.html/?locale=en_US
 
 <!-- sponsored sex toy links -->
 
@@ -367,3 +373,4 @@ This mod would not have been possible without the [BepInEx] plugin framework and
 [Solas City Heroes]: https://store.steampowered.com/app/2060170/Solas_City_Heroes/
 [Melty Night VR]: https://ci-en.dlsite.com/creator/3131
 [Orc Massage]: https://store.steampowered.com/app/1129540/Orc_Massage/
+[Summer In Heat]: https://www.dlsite.com/maniax/announce/=/product_id/RJ365188.html
