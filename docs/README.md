@@ -110,7 +110,8 @@ Settings.
 ⚠ In certain games, the kill switch may not work if the BepInEx console is open while playing in VR,
 because it can steal focus from the game window. It is recommended to disable the console.
 
-If you need further help in using the plugin, please open an [issue].
+If you need further help in using the plugin, check the [Troubleshooting](troubleshooting.md) page
+or open an [issue].
 
 If you found this project useful, please give it a ⭐.
 
