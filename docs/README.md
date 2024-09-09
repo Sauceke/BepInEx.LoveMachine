@@ -82,6 +82,10 @@ Oscillators
 
 ℹ️ **Every supported device works with every game. No exceptions.**
 
+⚠ **The devices listed under Oscillators have no positional feedback. They don't know which way is
+up and down, so they can't accurately sync to in-game characters. If you want to buy a device that
+can, you're looking for something under Strokers.**
+
 The [LoveMachine.Experiments] plugin also adds experimental support for two depth sensing devices
 ([Lovense Calor] and the [Hotdog]) to Koikatsu and Koikatsu Sunshine.
 
