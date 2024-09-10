@@ -96,10 +96,6 @@ More info > Run anyway.
 
 [Intiface Central] must also be installed.
 
-⚠ The IL2CPP plugins (RoomGirl, Holy Knight Ricca) are not compatible with other BepInEx plugins at
-the moment. To use LoveMachine in IL2CPP games, you'll have to remove the BepInEx folder if there is
-one (thus also removing all other mods from the game), before running the installer.
-
 ## How to use
 
 1. Open Intiface Central.
