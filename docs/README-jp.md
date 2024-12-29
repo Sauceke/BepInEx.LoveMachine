@@ -11,35 +11,35 @@ LoveMachine はアダルトゲームのキャラクターと連動してアダ�
 
 [一部の自律型デバイス](#サポートしているデバイス)について、以下のゲームに対応しています。
 
-| ゲームタイトル               | 開発者             | 🥽 VR 版       | 🖥 PC 版 |
-| :--------------------------- | :----------------- | :------------- | :------ |
-| [駆動妖精アイディールレイズ] | Riez-ON            |                | ⭕      |
-| AI＊少女                     | ILLUSION           | ⭕※[AISVR]のみ | ⭕      |
-| [カスタムオーダーメイド 3D2] | Kiss               | ⭕             | ⭕      |
-| [隣人彼女と脱衣ジャンケン]   | Visionary          |                | ⭕      |
-| エモーション・クリエイターズ | ILLUSION           | ⭕※[EC_VR]のみ | ⭕      |
-| [聖騎士リッカの物語]         | もぐらソフト       |                | ⭕      |
-| [ハニカム]                   | ILLGAMES           |                | ⭕      |
-| ハニーセレクト               | ILLUSION           |                | ⭕      |
-| ハニーセレクト 2             | ILLUSION           | ⭕             | ⭕      |
-| [放課後輪姦中毒]             | みこにそみ         | ⭕※[AGHVR]のみ | ⭕      |
-| [淫魔界 2: カムラン]         | 淡泊室             |                | ⭕      |
-| [インサルトオーダー]         | みこにそみ         | ⭕※[IOVR]のみ  | ⭕      |
-| コイカツ！                   | ILLUSION           | ⭕             | ⭕      |
-| コイカツ！パーティ           | ILLUSION           | ⭕             | ⭕      |
-| コイカツ！サンシャイン       | ILLUSION           | ⭕             | ⭕      |
-| [恋来い温泉物語]             | アプリコットハート | ⭕             | ⭕      |
-| [Last Evil]                  | Flametorch         |                | ⭕      |
-| [大江戸とりがー!!]           | CQC Software       | ⭕ ※別売り     | ⭕      |
-| [Our Apartment]              | Momoiro Software   |                | ⭕      |
-| プレイホーム                 | ILLUSION           | ⭕             | ⭕      |
-| ROOM ガール                  | ILLUSION           |                | ⭕      |
-| セクロスフィア               | ILLUSION           |                | ⭕      |
-| [セクサロイドな彼女]         | Daminz             | ⭕             |         |
-| [Solas City Heroes]          | MrZGames           |                | ⭕      |
-| [Succubus Cafe]              | MIGI STUDIO        |                | ⭕      |
-| VR カノジョ                  | ILLUSION           | ⭕             |         |
-| [ライジングプレイ]           | Robi               | ⭕             | ⭕      |
+| ゲームタイトル               | 開発者             | 🥽 VR 版              | 🖥 PC 版 |
+| :--------------------------- | :----------------- | :-------------------- | :------ |
+| [駆動妖精アイディールレイズ] | Riez-ON            |                       | ⭕      |
+| AI＊少女                     | ILLUSION           | ⭕※[AISVR]のみ        | ⭕      |
+| [カスタムオーダーメイド 3D2] | Kiss               | ⭕                    | ⭕      |
+| [隣人彼女と脱衣ジャンケン]   | Visionary          |                       | ⭕      |
+| エモーション・クリエイターズ | ILLUSION           | ⭕※[EC_VR]のみ        | ⭕      |
+| [聖騎士リッカの物語]         | もぐらソフト       |                       | ⭕      |
+| [ハニカム] + DIGITAL CRAFT   | ILLGAMES           | ⭕※DIGITAL CRAFT のみ | ⭕      |
+| ハニーセレクト               | ILLUSION           |                       | ⭕      |
+| ハニーセレクト 2             | ILLUSION           | ⭕                    | ⭕      |
+| [放課後輪姦中毒]             | みこにそみ         | ⭕※[AGHVR]のみ        | ⭕      |
+| [淫魔界 2: カムラン]         | 淡泊室             |                       | ⭕      |
+| [インサルトオーダー]         | みこにそみ         | ⭕※[IOVR]のみ         | ⭕      |
+| コイカツ！                   | ILLUSION           | ⭕                    | ⭕      |
+| コイカツ！パーティ           | ILLUSION           | ⭕                    | ⭕      |
+| コイカツ！サンシャイン       | ILLUSION           | ⭕                    | ⭕      |
+| [恋来い温泉物語]             | アプリコットハート | ⭕                    | ⭕      |
+| [Last Evil]                  | Flametorch         |                       | ⭕      |
+| [大江戸とりがー!!]           | CQC Software       | ⭕ ※別売り            | ⭕      |
+| [Our Apartment]              | Momoiro Software   |                       | ⭕      |
+| プレイホーム                 | ILLUSION           | ⭕                    | ⭕      |
+| ROOM ガール                  | ILLUSION           |                       | ⭕      |
+| セクロスフィア               | ILLUSION           |                       | ⭕      |
+| [セクサロイドな彼女]         | Daminz             | ⭕                    |         |
+| [Solas City Heroes]          | MrZGames           |                       | ⭕      |
+| [Succubus Cafe]              | MIGI STUDIO        |                       | ⭕      |
+| VR カノジョ                  | ILLUSION           | ⭕                    |         |
+| [ライジングプレイ]           | Robi               | ⭕                    | ⭕      |
 
 ## サポートしているデバイス
 
@@ -211,30 +211,6 @@ LoveMachine はアダルトグッズとの連動を可能にする Buttplug プ�
 
 この MOD は無料ですが、寄付を受け付けています。私の開発を応援してくださる方は、[こちら][Patreon]から
 よろしくお願いします。
-
-### 開発者
-
-Sauceke   •   nhydock   •   hogefugamoga   •   RPKU ・ andama777(日本語訳)
-
-### パトロン
-
-[ManlyMarco]   •   '- [ Willox ] ヘンタイ    •   AbGz   •   AkronusWings   •   Alex   •  
-Ambicatus   •   Andrew Hall   •   as a1031   •   AstralClock   •   asuka   •   Atlantic Dragon   •  
-Average MBT viewer   •   Benos Hentai   •   boaz   •   BOOK   •   Bri   •   Bunny Dreammy   •  
-butz   •   cat tail   •   Ceruleon   •   Chai   •   CJ   •   CookieMuncher   •   CROM   •   CSV
-TORP   •   Daniel   •   dc1222   •   DDJTK   •   EPTG   •   er er   •   Ergo   •  
-Firestorm447   •   funnychicken   •   Gabbelgu   •   Gaku Kihara   •   gmolnmol   •   gold25   •  
-GOU YOSIHIRO   •   Greg   •   Grindcore   •   hiro   •   Ior1yagami   •   jason   •   Jayhawk   •  
-Jesse Russell   •   JJ   •   John Last   •   Kai Yami   •   KodFish   •   KTKT   •   kunewb   •  
-kuni   •   Lancer   •   Laneo   •   le d   •   lover not fighter   •   Maha   •   Marcos
-Gonzalez   •   milkyway ミルク    •   mokochurin   •   Moon2S Clap   •   Nemi   •   Nephilim
-Bacon   •   Noel Molina   •   nppon   •   PhazR   •   pontatata   •   POPO popo   •  
-prepare55   •   real name   •   RP 君    •   SavagePastry   •   Shakes   •   shiro   •  
-Sphiffy   •   Taibe   •   TO   •   TrashTaste   •   ttrs   •   tutinoko   •   unitora   •   Wel
-Adunno   •   xagtxc   •   yur liao   •   Zijian Wang   •   Zomba Mann   •   ヴい＠CBN   •   グリム・
-ヴァン・アストル 聖騎士    •   こわい まんじゅー    •   シルバー    •   ふ    •   マラカス    •   り
-ょすけ みのかわ    •   一太 川崎    •   優希 岩永    •   哲慶 宗    •   国崎往人    •   夢 阿    •  
-洋 冨岡    •   猛 羽場    •   终晓    •   郁弥 中村    •   闇《YAMI》   •   高島　渉
 
 ## 謝辞
 

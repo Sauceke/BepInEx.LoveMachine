@@ -8,34 +8,34 @@
 
 Adds support for [some computer-controlled sex toys](#supported-devices) in the following games:
 
-| Title                       | Developer     | 🥽 VR                        | 🖥 Desktop |
-| --------------------------- | ------------- | ---------------------------- | --------- |
-| [AI-deal-Rays]              | Riez-ON       |                              | ✓         |
-| AI Shoujo                   | Illusion      | ✓ <sup>with [AISVR]</sup>    | ✓         |
-| [Custom Order Maid 3D 2]    | Kiss          | ✓                            | ✓         |
-| [Datsui Janken]             | Visionary     |                              | ✓         |
-| Emotion Creators            | Illusion      | ✓ <sup>with [EC_VR]</sup>    | ✓         |
-| [Holy Knight Ricca]         | Mogurasoft    |                              | ✓         |
-| [HoneyCome]                 | Illgames      |                              | ✓         |
-| Honey Select                | Illusion      |                              | ✓         |
-| Honey Select 2              | Illusion      | ✓                            | ✓         |
-| [Houkago Rinkan Chuudoku]   | Miconisomi    | ✓ <sup>with [AGHVR]</sup>    | ✓         |
-| [Incubus 2: Camlann]        | Tanpakusitsu  |                              | ✓         |
-| [Insult Order]              | Miconisomi    | ✓ <sup>with [IOVR]</sup>     | ✓         |
-| Koikatsu                    | Illusion      | ✓                            | ✓         |
-| Koikatsu Party              | Illusion      | ✓                            | ✓         |
-| Koikatsu Sunshine           | Illusion      | ✓                            | ✓         |
-| [Koi-Koi VR: Love Blossoms] | Apricot Heart | ✓                            | ✓         |
-| [Last Evil]                 | Flametorch    |                              | ✓         |
-| [Oedo Trigger]              | CQC Software  | ✓ <sup>sold separately</sup> | ✓         |
-| PlayHome                    | Illusion      | ✓                            | ✓         |
-| RoomGirl                    | Illusion      |                              | ✓         |
-| Secrossphere                | Illusion      |                              | ✓         |
-| [Sexaroid Girl]             | Daminz        | ✓                            |           |
-| [Solas City Heroes]         | MrZGames      |                              | ✓         |
-| [Succubus Cafe]             | Migi Studio   |                              | ✓         |
-| VR Kanojo                   | Illusion      | ✓                            |           |
-| [Writhing Play]             | Robi          | ✓                            | ✓         |
+| Title                       | Developer     | 🥽 VR                         | 🖥 Desktop |
+| --------------------------- | ------------- | ----------------------------- | --------- |
+| [AI-deal-Rays]              | Riez-ON       |                               | ✓         |
+| AI Shoujo                   | Illusion      | ✓ <sup>with [AISVR]</sup>     | ✓         |
+| [Custom Order Maid 3D 2]    | Kiss          | ✓                             | ✓         |
+| [Datsui Janken]             | Visionary     |                               | ✓         |
+| Emotion Creators            | Illusion      | ✓ <sup>with [EC_VR]</sup>     | ✓         |
+| [Holy Knight Ricca]         | Mogurasoft    |                               | ✓         |
+| [HoneyCome] & Digital Craft | Illgames      | ✓ <sup>in Digital Craft</sup> | ✓         |
+| Honey Select                | Illusion      |                               | ✓         |
+| Honey Select 2              | Illusion      | ✓                             | ✓         |
+| [Houkago Rinkan Chuudoku]   | Miconisomi    | ✓ <sup>with [AGHVR]</sup>     | ✓         |
+| [Incubus 2: Camlann]        | Tanpakusitsu  |                               | ✓         |
+| [Insult Order]              | Miconisomi    | ✓ <sup>with [IOVR]</sup>      | ✓         |
+| Koikatsu                    | Illusion      | ✓                             | ✓         |
+| Koikatsu Party              | Illusion      | ✓                             | ✓         |
+| Koikatsu Sunshine           | Illusion      | ✓                             | ✓         |
+| [Koi-Koi VR: Love Blossoms] | Apricot Heart | ✓                             | ✓         |
+| [Last Evil]                 | Flametorch    |                               | ✓         |
+| [Oedo Trigger]              | CQC Software  | ✓ <sup>sold separately</sup>  | ✓         |
+| PlayHome                    | Illusion      | ✓                             | ✓         |
+| RoomGirl                    | Illusion      |                               | ✓         |
+| Secrossphere                | Illusion      |                               | ✓         |
+| [Sexaroid Girl]             | Daminz        | ✓                             |           |
+| [Solas City Heroes]         | MrZGames      |                               | ✓         |
+| [Succubus Cafe]             | Migi Studio   |                               | ✓         |
+| VR Kanojo                   | Illusion      | ✓                             |           |
+| [Writhing Play]             | Robi          | ✓                             | ✓         |
 
 The following early access games are also supported, but compatibility with later versions of them
 is not guaranteed.
@@ -47,6 +47,7 @@ is not guaranteed.
 | [Orc Massage]              | TorchEntertainment | July 11, 2023     | [Patreon post][Patreon-OM], or build the `om` branch     |
 | [Summer In Heat]           | Miconisomi         | 0.10              | [Free patreon post][Patreon-SIH]                         |
 | [Summer Vacation Scramble] | Illgames           | 1.0.0             | [Free patreon post][Patreon-SVS]                         |
+| [Sex Formula]              | Migi Studio        | 1.3.0             | [Patreon post][Patreon-SF], or build the `sf` branch     |
 
 ## Supported devices
 
@@ -265,31 +266,10 @@ welcome.
 This mod is provided free of charge, but I do accept donations. If you'd like to boost my morale,
 please check me out on [Patreon].
 
-### Developers
-
-Sauceke   •   nhydock   •   hogefugamoga   •   RPKU   •   andama777 (JP translation)
-
-### Patrons
-
-[ManlyMarco]   •   '- [ Willox ] ヘンタイ    •   AbGz   •   AkronusWings   •   Alex   •  
-Ambicatus   •   Andrew Hall   •   as a1031   •   AstralClock   •   asuka   •   Atlantic Dragon   •  
-Average MBT viewer   •   Benos Hentai   •   boaz   •   BOOK   •   Bri   •   Bunny Dreammy   •  
-butz   •   cat tail   •   Ceruleon   •   Chai   •   CJ   •   CookieMuncher   •   CROM   •   CSV
-TORP   •   Daniel   •   dc1222   •   DDJTK   •   EPTG   •   er er   •   Ergo   •  
-Firestorm447   •   funnychicken   •   Gabbelgu   •   Gaku Kihara   •   gmolnmol   •   gold25   •  
-GOU YOSIHIRO   •   Greg   •   Grindcore   •   hiro   •   Ior1yagami   •   jason   •   Jayhawk   •  
-Jesse Russell   •   JJ   •   John Last   •   Kai Yami   •   KodFish   •   KTKT   •   kunewb   •  
-kuni   •   Lancer   •   Laneo   •   le d   •   lover not fighter   •   Maha   •   Marcos
-Gonzalez   •   milkyway ミルク    •   mokochurin   •   Moon2S Clap   •   Nemi   •   Nephilim
-Bacon   •   Noel Molina   •   nppon   •   PhazR   •   pontatata   •   POPO popo   •  
-prepare55   •   real name   •   RP 君    •   SavagePastry   •   Shakes   •   shiro   •  
-Sphiffy   •   Taibe   •   TO   •   TrashTaste   •   ttrs   •   tutinoko   •   unitora   •   Wel
-Adunno   •   xagtxc   •   yur liao   •   Zijian Wang   •   Zomba Mann   •   ヴい＠CBN   •   グリム・
-ヴァン・アストル 聖騎士    •   こわい まんじゅー    •   シルバー    •   ふ    •   マラカス    •   り
-ょすけ みのかわ    •   一太 川崎    •   優希 岩永    •   哲慶 宗    •   国崎往人    •   夢 阿    •  
-洋 冨岡    •   猛 羽場    •   终晓    •   郁弥 中村    •   闇《YAMI》   •   高島　渉
-
 ## Acknowledgements
+
+Thanks to nhydock, hogefugamoga, RPKU, and andama777 for contributing to the project, and to my
+Patreon members for their generous support.
 
 This mod would not have been possible without the [BepInEx] plugin framework and, of course, the
 [Buttplug.io] project.
@@ -313,6 +293,7 @@ This mod would not have been possible without the [BepInEx] plugin framework and
 [Patreon-OM]: https://www.patreon.com/posts/lovemachine-for-105156790
 [Patreon-SIH]: https://www.patreon.com/posts/xia-nosakari-107065871
 [Patreon-SVS]: https://www.patreon.com/posts/lovemachine-for-111228062
+[Patreon-SF]: https://www.patreon.com/posts/lovemachine-for-116761160
 [Demo video]: https://www.erome.com/a/f2XKHJ1I
 [issue]: https://github.com/Sauceke/LoveMachine/issues/new?template=technical-problem.md
 
