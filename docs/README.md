@@ -356,3 +356,4 @@ This mod would not have been possible without the [BepInEx] plugin framework and
 [Melty Night VR]: https://ci-en.dlsite.com/creator/3131
 [Orc Massage]: https://store.steampowered.com/app/1129540/Orc_Massage/
 [Summer In Heat]: https://www.dlsite.com/maniax/announce/=/product_id/RJ365188.html
+[Sex Formula]: https://store.steampowered.com/app/2889660/Sex_Formula/
