@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Reflection;
 using HarmonyLib;
+using Il2CppInterop.Runtime;
 using LoveMachine.Core.Common;
 using LoveMachine.Core.Game;
 using UnityEngine;
@@ -37,7 +38,7 @@ public class DigitalCraftGame : GameAdapter
     protected override float PenisSize => 0.07f;
     protected override int AnimationLayer => 0;
     protected override int HeroineCount => females.Length;
-    protected override int MaxHeroineCount => 2;
+    protected override int MaxHeroineCount => 4;
     protected override bool IsHardSex => false;
 
     protected override Animator GetFemaleAnimator(int girlIndex) =>
@@ -51,17 +52,19 @@ public class DigitalCraftGame : GameAdapter
 
     protected override IEnumerator UntilReady(object instance)
     {
-        yield return new WaitForSeconds(10f);
-        females = new[] { "chaF_00", "chaF_01" }
-            .Select(GameObject.Find)
-            .Where(go => go != null && go.active)
-            .Select(chara => (chara.transform.Find("BodyTop/p_cf_jm_body_bone_00")
-                ?? chara.transform.Find("BodyTop/p_cf_jm_body_bone_00(Clone)")).gameObject)
+        yield return new WaitForSeconds(5f);
+        var humanType = Il2CppType.From(Type.GetType("Character.HumanComponent,Assembly-CSharp"));
+        var humans = FindObjectsOfType(humanType, false)
+            .Select(human => human.Cast<MonoBehaviour>().transform)
             .ToArray();
-        penises = new[] { "chaM_00", "chaM_01" }
-            .Select(GameObject.Find)
-            .Where(go => go != null && go.active)
-            .Select(chara => FindDeepChildrenByPath(chara, "k_f_tamaC_00").First())
+        females = humans
+            .Where(tf => tf.name.StartsWith("chaF_"))
+            .Select(chara => (chara.Find("BodyTop/p_cf_jm_body_bone_00")
+                ?? chara.Find("BodyTop/p_cf_jm_body_bone_00(Clone)")).gameObject)
+            .ToArray();
+        penises = humans
+            .Where(tf => tf.name.StartsWith("chaM_"))
+            .Select(chara => FindDeepChildrenByPath(chara.gameObject, "k_f_tamaC_00").First())
             .ToArray();
     }
 }
