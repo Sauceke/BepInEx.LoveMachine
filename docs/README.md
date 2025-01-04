@@ -48,6 +48,7 @@ is not guaranteed.
 | [Summer In Heat]           | Miconisomi         | 0.10              | [Free patreon post][Patreon-SIH]                         |
 | [Summer Vacation Scramble] | Illgames           | 1.0.0             | [Free patreon post][Patreon-SVS]                         |
 | [Sex Formula]              | Migi Studio        | 1.3.0             | [Patreon post][Patreon-SF], or build the `sf` branch     |
+| [Gals Collector]           | Studio Tris        | 1.04              | [Free patreon post][Patreon-GC]                          |
 
 ## Supported devices
 
@@ -294,6 +295,7 @@ This mod would not have been possible without the [BepInEx] plugin framework and
 [Patreon-SIH]: https://www.patreon.com/posts/xia-nosakari-107065871
 [Patreon-SVS]: https://www.patreon.com/posts/lovemachine-for-111228062
 [Patreon-SF]: https://www.patreon.com/posts/lovemachine-for-116761160
+[Patreon-GC]: https://www.patreon.com/posts/lovemachine-for-119312328
 [Demo video]: https://www.erome.com/a/f2XKHJ1I
 [issue]: https://github.com/Sauceke/LoveMachine/issues/new?template=technical-problem.md
 
@@ -325,6 +327,8 @@ This mod would not have been possible without the [BepInEx] plugin framework and
   https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/sauceke/locale/en_US/id/RJ406835.html/?locale=en_US
 [Summer Vacation Scramble]:
   https://www.dlsite.com/pro/dlaf/=/t/n/link/work/aid/sauceke/locale/en_US/id/VJ01002420.html/?locale=en_US
+[Gals Collector]:
+  https://www.dlsite.com/maniax/dlaf/=/t/n/link/work/aid/sauceke/locale/en_US/id/RJ01285811.html/?locale=en_US
 
 <!-- sponsored sex toy links -->
 
