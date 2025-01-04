@@ -10,4 +10,7 @@
     <ItemGroup>
         <ProjectReference Include="..\LoveMachine.Core.IL2CPP\LoveMachine.Core.IL2CPP.csproj" />
     </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="IllusionLibs.HoneyCome.UnityEngine.UI" Version="2021.3.14.3" ExcludeAssets="runtime" />
+    </ItemGroup>
 </Project>

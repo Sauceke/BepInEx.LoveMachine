@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Reflection;
+using HarmonyLib;
 using LoveMachine.Core.Common;
 using LoveMachine.Core.Game;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace LoveMachine.GC;
 
@@ -10,10 +12,15 @@ internal class GalsCollectorGame : GameAdapter
 {
     private GameObject[] females;
     private Animator[] femaleAnimators;
-    private Animator maleAnimator;
+    private Button finish;
+    private GameObject shot;
+    private GameObject replay;
 
-    protected override MethodInfo[] StartHMethods { protected internal get; }
-    protected override MethodInfo[] EndHMethods { protected internal get; }
+    protected override MethodInfo[] StartHMethods =>
+        new[] { AccessTools.Method(typeof(HSceneMonitor), nameof(HSceneMonitor.HSceneStarted)) };
+    
+    protected override MethodInfo[] EndHMethods =>
+        new[] { AccessTools.Method(typeof(HSceneMonitor), nameof(HSceneMonitor.HSceneEnded)) };
     
     protected override Dictionary<Bone, string> FemaleBoneNames => new Dictionary<Bone, string>
     {
@@ -43,15 +50,11 @@ internal class GalsCollectorGame : GameAdapter
         GetAnimatorStateInfo(girlIndex).fullPathHash.ToString();
 
     protected override bool IsIdle(int girlIndex) =>
-        maleAnimator.GetCurrentAnimatorStateInfo(0).fullPathHash == 514553200;
+        !finish.interactable && (!shot.active || replay.active);
 
     protected override IEnumerator UntilReady(object instance)
     {
         yield return new WaitForSeconds(1f);
-        while (GameObject.Find("/UI/UI_Sex_Container") == null)
-        {
-            yield return new WaitForSeconds(5f);
-        }
         femaleAnimators = GameObject.Find("/Chara")
             .GetComponentsInChildren<Animator>()
             .Where(anim => anim.name.All(char.IsDigit))
@@ -59,6 +62,10 @@ internal class GalsCollectorGame : GameAdapter
         females = femaleAnimators
             .Select(anim => anim.transform.Find("Armature").gameObject)
             .ToArray();
-        maleAnimator = GameObject.Find("/Chara/Male_A").GetComponent<Animator>();
+        finish = GameObject.Find("/UI").transform
+            .Find("UI_Sex_Container/Container/UI_Menu_Action/Bg_Speed_Toggle/FINISH")
+            .GetComponent<Button>();
+        shot = finish.transform.Find("SHOT_Slider").gameObject;
+        replay = finish.transform.Find("Replay_Button").gameObject;
     }
 }
