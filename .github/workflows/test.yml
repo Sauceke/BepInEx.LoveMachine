@@ -20,6 +20,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: src
+          pattern: *
+          merge-multiple: true
 
       - name: Cache Secrossphere demo
         uses: actions/cache@v3

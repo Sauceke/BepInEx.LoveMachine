@@ -34,6 +34,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: src
+          pattern: *
+          merge-multiple: true
 
       - name: Create release
         id: create_release
