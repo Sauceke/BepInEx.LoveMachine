@@ -48,5 +48,5 @@ jobs:
       - name: Upload binaries
         uses: actions/upload-artifact@v4
         with:
-          name: bin
+          name: bin-${{ matrix.configuration }}
           path: src/bin

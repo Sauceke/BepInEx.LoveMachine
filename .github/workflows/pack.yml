@@ -31,6 +31,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: src
+          pattern: *
+          merge-multiple: true
 
       - name: Alias dependencies
         run: ./alias-deps.ps1
