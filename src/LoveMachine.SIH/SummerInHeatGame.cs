@@ -47,6 +47,7 @@ namespace LoveMachine.SIH
                 .Where(go => go != null && go.activeInHierarchy)
                 .Select(go => go.transform).ToArray();
 
+        protected override float PenisSize => 0.12f;
         protected override int AnimationLayer => 0;
         protected override int HeroineCount => femaleRoots.Length;
         protected override int MaxHeroineCount => 2;
