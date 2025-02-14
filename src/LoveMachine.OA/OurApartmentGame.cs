@@ -40,7 +40,7 @@ internal sealed class OurApartmentGame : GameAdapter
 
     protected override MethodInfo[] StartHMethods => new[]
     {
-        AccessTools.Method("Momoirosoft.Managers.SexSimControl, Assembly-CSharp:InitializeAsync")
+        AccessTools.Method("Momoirosoft.Managers.SexSimControl, Assembly-CSharp:StartStreams")
     };
 
     protected override MethodInfo[] EndHMethods => new[]
